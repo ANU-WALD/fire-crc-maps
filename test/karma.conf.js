@@ -28,6 +28,10 @@ module.exports = function(config) {
       'bower_components/angular-animate/angular-animate.js',
       'bower_components/angular-route/angular-route.js',
       'bower_components/angular-touch/angular-touch.js',
+      'bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
+      'bower_components/leaflet/dist/leaflet-src.js',
+      'bower_components/angular-leaflet-directive/dist/angular-leaflet-directive.js',
+      'bower_components/dap-query-js/dist/dap-query.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",

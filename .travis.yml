@@ -1,9 +1,20 @@
 sudo: false
 language: node_js
-node_js:
-  - 'iojs'
-  - '0.12'
-  - '0.10'
+node_js: stable
 before_script:
   - 'npm install -g bower grunt-cli'
   - 'bower install'
+install:
+  - npm install -g bower grunt-cli
+  - npm install phantomjs-prebuilt
+  - npm install
+  - bower install
+  - gem install compass
+script:
+  - grunt test
+  - grunt build
+notifications:
+  email: false
+  slack:
+    rooms: wenfo:N1YfzQWaJ8wfjvrYarrh33PZ
+    on_success: always
