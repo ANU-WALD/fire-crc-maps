@@ -12,6 +12,8 @@ angular
   .module('flammabilityApp', [
     'ngAnimate',
     'ngRoute',
+    'leaflet-directive',
+    'ui.bootstrap',
     'ngTouch'
   ])
   .config(function ($routeProvider) {
