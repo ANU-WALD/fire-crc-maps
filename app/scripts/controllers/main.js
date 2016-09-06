@@ -30,14 +30,18 @@ angular.module('flammabilityApp')
         },  //overlays.mask
         fmc: {
           name: 'Fuel Moisture Conent',
-          url: 'http://dapds00.nci.org.au/thredds/wms/ub8/au/FMC/MCD43A4.A2014329.h29v13.005.2014347051300_LFMC.nc?',
+//          url: 'http://dapds00.nci.org.au/thredds/wms/ub8/au/FMC/MCD43A4.A2014329.h29v13.005.2014347051300_LFMC.nc?',
+//          url: 'http://localhost:8080/thredds/wms/wald/ROI_Reprojected_Mosaic_LFMC_2015321.nc?',
+          url: 'http://dapds00.nci.org.au/thredds/wms/ub8/au/FMC-testing/ROI_Reprojected_Mosaic_LFMC_2015321.nc?',
           // service=WMS&version=1.3.0&request=GetCapabilities
           type: 'wms',
           visible: true,
           layerParams:{
             version: '1.3.0',
             format: 'image/png',
-            layers:'LFMC_Mean',
+            layers:'Band1',
+            colorscalerange:'0,350',
+            transparent:true
           }
         }
       }
